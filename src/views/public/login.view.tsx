@@ -24,19 +24,12 @@ function LoginView() {
     setLoading(true);
     try{
       const result = await API.login(username, password)
+      console.log(result)
     } catch(e) {
       console.log(e)
     } finally {
       setLoading(false)
     }
-
-    // API.login(username, password).then((result: any) => {
-    //   console.log('result: ', result)
-    //   setLoading(false);
-    // }).catch((err:any) =>{
-    //   setLoading(false);
-    //   console.log(err);
-    // });
   };
 
   return (
